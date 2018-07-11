@@ -44,14 +44,16 @@ export default class Map extends Component {
   };
 
   render () {
-    const {shareModalVisible, locateModalVisible} = this.state;
+    const {shareModalVisible, locateModalVisible, search } = this.state;
 
     return (
       <div ref='mapView' className='map-view'>
         <Controls view={this.view} />
         <Spinner active={!this.view.ready} />
         <ShareModal visible={shareModalVisible} />
-        <LocateModal visible={locateModalVisible} />
+        <LocateModal visible={locateModalVisible}>
+        <input type = "text" value={this.state.search} />>
+        </LocateModal>
       </div>
     );
   }

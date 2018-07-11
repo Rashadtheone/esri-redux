@@ -26,22 +26,22 @@ export const URLS = {
 };
 
 export const SEARCH = {
-  locate: location => `//geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer`,
+  locate: location => `//geocode.arcgis.com/arcgis/rest/services/${location}/GeocodeServer`,
   singleLineFieldName: "SingleLine",
   outFields: ["Addr_type"],
   name: "ArcGis World Geocoding Service",
   localSearchOptions: {
-    minscale: 300000,
+    minScale: 300000,
     distance: 50000
-  },
-  placeholder: i18n.placeholder,
-  resultsSymbol: {
-    type: "picture-marker",
-    url: this.basePath + "/images/search/search-symbol-32.png",
-    size: 24,
-    width: 24,
-    height: 24,
-    xoffset: 0,
-    yoffset: 0
-  }
+   },
+  // placeholder: i18n.placeholder,
+  // resultsSymbol: {
+  //   type: "picture-marker",
+  //   url: this.basePath + "/images/search/search-symbol-32.png",
+  //   size: 24,
+  //   width: 24,
+  //   height: 24,
+  //   xoffset: 0,
+  //   yoffset: 0
+  // }
 }
