@@ -3,7 +3,8 @@ import {
   FETCH_ITEM_INFO,
   TOGGLE_LOCATE,
   TOGGLE_SHARE,
-  VIEW_READY
+  VIEW_READY,
+  SEARCH_LOCATION
 } from 'js/constants/actionTypes';
 
 export function viewCreated () {
@@ -28,3 +29,12 @@ export function getItemInfo (appid) {
     });
   };
 }
+
+export function searchLocation (location) {
+  return dispatch => {
+    api.searchLocation(location).then(response => {
+      dispatch({type: SEARCH_LOCATION, data: response.data })
+    })
+  }
+}
+

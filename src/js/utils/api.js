@@ -10,6 +10,12 @@ export default {
     return esriRequest(URLS.itemInfo(appid), {
       responseType: 'json'
     });
+  },
+  searchLocation: location => {
+    return esriRequest(URLS.locate(location), {
+      responseType: 'json'
+    })
+
   }
 
 };
