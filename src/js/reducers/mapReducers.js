@@ -6,6 +6,7 @@ import {
   TOGGLE_SHARE,
   VIEW_READY
 } from 'js/constants/actionTypes';
+import { SEARCH_LOCATION } from '../constants/actionTypes';
 
 export function viewCreated (state = INITIAL_STATE.viewReady, action) {
   return action.type !== VIEW_READY ? state : true;
@@ -31,4 +32,9 @@ export function toggleLocateModal (state = INITIAL_STATE.locateModalVisible, act
 export function getItemInfo (state = INITIAL_STATE.itemInfo, action) {
   const {type, data} = action;
   return type !== FETCH_ITEM_INFO ? state : data;
+}
+
+export function searchLoction (state = INITIAL_STATE.location, action) {
+  const {type, data} = action;
+  return type !==SEARCH_LOCATION ? state : data;
 }
