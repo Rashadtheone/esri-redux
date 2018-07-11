@@ -34,7 +34,7 @@ export function getItemInfo (state = INITIAL_STATE.itemInfo, action) {
   return type !== FETCH_ITEM_INFO ? state : data;
 }
 
-export function searchLoction (state = INITIAL_STATE.location, action) {
+export function searchLocation (state = INITIAL_STATE.location, action) {
   const {type, data} = action;
   return type !==SEARCH_LOCATION ? state : data;
 }
